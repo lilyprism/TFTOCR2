@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tesserocr = {path = "./requirements/tesserocr-2.6.0-cp311-cp311-win_amd64.whl"}
+pillow = "*"
+opencv-python = "*"
+numpy = "*"
+requests = "*"
+pywin32 = "*"
+dxcam = "*"
+imutils = "*"
+pydirectinput = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
