@@ -1,45 +1,42 @@
 import random
-import pydirectinput
+from pynput.mouse import Controller as MouseController, Button
+from pynput.keyboard import Controller as KeyboardController, Key
 
+class VirtualController:
+    # Controller-Objekte für Maus und Tastatur
+    mouse = MouseController()
+    keyboard = KeyboardController()
 
-class VirtualController(object):
+    @staticmethod
+    def left_click(x: float, y: float) -> None:
+        """ Führt einen linken Mausklick aus """
+        offset = random.randint(-2, 2)
+        VirtualController.mouse.position = (x + offset, y + offset)
+        VirtualController.mouse.click(Button.left)
 
-	@staticmethod
-	def left_click(x: float, y: float) -> None:
-		""" Will execute a left mouse button click """
+    @staticmethod
+    def right_click(x: float, y: float) -> None:
+        """ Führt einen rechten Mausklick aus """
+        offset = random.randint(-2, 2)
+        VirtualController.mouse.position = (x + offset, y + offset)
+        VirtualController.mouse.click(Button.right)
 
-		offset: int = random.randint(-2, 2)
-		pydirectinput.moveTo(int(x) - offset, int(y) - offset)
-		pydirectinput.mouseDown()
-		pydirectinput.mouseUp()
+    @staticmethod
+    def press_f() -> None:
+        """ Drückt die Taste F """
+        VirtualController.keyboard.press('f')
+        VirtualController.keyboard.release('f')
 
-	@staticmethod
-	def right_click(x: float, y: float) -> None:
-		""" Will execute a right mouse button click """
+    @staticmethod
+    def press_d() -> None:
+        """ Drückt die Taste D """
+        VirtualController.keyboard.press('d')
+        VirtualController.keyboard.release('d')
 
-		x, y = int(x), int(y)
-		offset: int = random.randint(-2, 2)
-		pydirectinput.moveTo(int(x) - offset, int(y) - offset)
-		pydirectinput.mouseDown(button="right")
-		pydirectinput.mouseUp(button="right")
-
-	@staticmethod
-	def press_f() -> None:
-		""" Will press F """
-
-		pydirectinput.press("f")
-
-	@staticmethod
-	def press_d() -> None:
-		""" Will press D """
-
-		pydirectinput.press("d")
-
-	@staticmethod
-	def press_e(x: float, y: float) -> None:
-		""" Will press E """
-
-		x, y = int(x), int(y)
-		offset: int = random.randint(-2, 2)
-		pydirectinput.moveTo(int(x) - offset, int(y) - offset)
-		pydirectinput.press("e")
+    @staticmethod
+    def press_e(x: float, y: float) -> None:
+        """ Bewegt die Maus und drückt die Taste E """
+        offset = random.randint(-2, 2)
+        VirtualController.mouse.position = (x + offset, y + offset)
+        VirtualController.keyboard.press('e')
+        VirtualController.keyboard.release('e')
