@@ -12,7 +12,7 @@ requests = "*"
 pywin32 = "*"
 dxcam = "*"
 imutils = "*"
-pydirectinput = "*"
+pynput = "*"
 
 [dev-packages]
 
