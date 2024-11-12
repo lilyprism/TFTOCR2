@@ -21,7 +21,7 @@ def at_stages(rounds: List[str]):
 
 class BasePlayer(object):
 
-	champs = ["Cho'Gath", "Malzahar", "Kassadin", "Rek'Sai", "Vel'Koz", "Kai'Sa", "Bel'Veth", "Yasuo"]
+	champs = ["Blitzcrank", "Seraphine", "Galio", "Nunu", "Vex", "Veigar", "Nami", "Taric", "Norra"]
 
 	_at_stage_funcs = []
 
