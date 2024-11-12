@@ -13,8 +13,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-    </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -26,10 +24,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-TFTOCR2 is currently not working as it is outdated and prone to errors and game bans. <br/>
-It is also incomplete, with set 9 of TFT but it has a really good code architecture that can scale for future sets if put in the time. <br/>
-You're free to change the code and make a pull request if you want to help.
 
+**TFTOCR2** is not perfect but functional; however, **using it will result in a ban** within a short period of time.
+
+Feel free to modify the code and submit a pull request if you'd like to contribute.
 
 
 <!-- GETTING STARTED -->
